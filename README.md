@@ -31,8 +31,8 @@ Small machine learning projects in Python as preparation for an MSc in Artificia
 5. `twitter_sentiment_classification.ipynb`  
    - Dataset: Kaggle Twitter entity-level sentiment dataset (tweet ID, entity, sentiment label, tweet text).  
    - Task: classify tweets into four sentiment classes (Irrelevant, Negative, Neutral, Positive) based on the tweet content.  
-   - Methods: data cleaning and column renaming, handling missing values, train/test split with stratification, TF-IDF text vectorisation, Logistic Regression classifier, evaluation with accuracy, precision/recall/F1-score per class, and confusion matrix heatmap (test accuracy ≈ 74%).
-   - Key results: Logistic Regression with TF-IDF features achieves about 74% accuracy on the test set, with per-class F1-scores between roughly 0.67 and 0.78.
+   - Methods: data cleaning and column renaming, handling missing values, train/test split with stratification, TF-IDF text vectorisation, Logistic Regression classifier, evaluation with accuracy, precision/recall/F1-score per class, and confusion matrix heatmap (test accuracy ≈ 74%).  
+   - Key results: Logistic Regression with TF-IDF features achieves about 74% test accuracy, with per-class F1-scores from 0.67 (Irrelevant) up to 0.78 (Negative) and macro/weighted F1 averages around 0.73–0.74.
 
 6. `wine_classification.ipynb`  
    - Dataset: built-in wine dataset from scikit-learn.  
