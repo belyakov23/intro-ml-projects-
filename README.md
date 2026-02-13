@@ -13,8 +13,8 @@ Small machine learning projects in Python as preparation for an MSc in Artificia
 2. `cats_dogs_classification.ipynb`  
    - Dataset: Kaggle "Cats and Dogs image classification" dataset with separate train/test folders for cat and dog JPEG images.  
    - Task: build a convolutional neural network to classify each image as either a cat or a dog.  
-   - Methods: Keras `ImageDataGenerator` for preprocessing and train/validation split, small CNN with multiple conv–max pooling blocks, training with binary cross-entropy and Adam, evaluation on validation and test sets (test accuracy ≈ 69%).
-   - Key results: CNN reaches about 85% training accuracy, around 66% validation accuracy, and roughly 69% accuracy on the held-out test set.
+   - Methods: Keras `ImageDataGenerator` for preprocessing and train/validation split, small CNN with multiple conv–max pooling blocks, training with binary cross-entropy and Adam, evaluation on validation and test sets.  
+   - Key results: Model reaches about 89% training accuracy and around 67% validation accuracy after 10 epochs, showing a reasonably effective but slightly overfitting cats-vs-dogs classifier on this dataset.
 
 3. `messy_housing_regression.ipynb`  
    - Dataset: Kaggle “Multiple Linear Regression Dataset” with outliers, missing values, and mixed numeric/categorical features.  
