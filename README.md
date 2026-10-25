@@ -1,41 +1,78 @@
-# intro-ml-projects-
+Machine Learning Projects
 
-Small machine learning projects in Python as preparation for an MSc in Artificial Intelligence.
+A collection of machine learning projects developed in Python, covering regression, classification, computer vision and natural language processing.
 
-## Projects
+The projects explore different ML algorithms, data preprocessing techniques, model training and evaluation.
 
-1. `california_housing_regression.ipynb`  
-   - Dataset: built-in California housing dataset from scikit-learn.  
-   - Task: predict median house value from features such as median income, house age, average rooms, population and latitude/longitude.  
-   - Methods: train/test split, feature standardisation, Linear Regression model, evaluation with mean squared error (MSE), mean absolute error (MAE), R-squared, and a scatter plot of actual vs predicted values.
-   - Key results: Linear Regression achieves a strong R-squared on the test set with reasonable MSE and MAE, and predictions align closely with actual median house values in the scatter plot.
-  
-2. `cats_dogs_classification.ipynb`  
-   - Dataset: Kaggle "Cats and Dogs image classification" dataset with separate train/test folders for cat and dog JPEG images.  
-   - Task: build a convolutional neural network to classify each image as either a cat or a dog.  
-   - Methods: Keras `ImageDataGenerator` for preprocessing and train/validation split, small CNN with multiple conv–max pooling blocks, training with binary cross-entropy and Adam, evaluation on validation and test sets.  
-   - Key results: Model reaches about 89% training accuracy and around 67% validation accuracy after 10 epochs, showing a reasonably effective but slightly overfitting cats-vs-dogs classifier on this dataset.
+Projects
 
-3. `messy_housing_regression.ipynb`  
-   - Dataset: Kaggle “Multiple Linear Regression Dataset” with outliers, missing values, and mixed numeric/categorical features.  
-   - Task: predict house prices from house size, distance to city, and location in a small but noisy dataset.  
-   - Methods: dropped rows with missing numeric values, one-hot encoded location, train/test split, baseline Linear Regression and RandomForestRegressor, evaluation with MAE, RMSE, R-squared, and residual plot.  
-   - Key results: Linear Regression achieves MAE ≈ 0.96, RMSE ≈ 1.31, R² ≈ 0.97, while RandomForestRegressor slightly improves to MAE ≈ 0.88, RMSE ≈ 1.22, R² ≈ 0.97 on the test set.
+1. Twitter Sentiment Classification
 
-4. `salary_regression.ipynb`  
-   - Dataset: Kaggle Salary Dataset – Simple Linear Regression, with YearsExperience and Salary columns.  
-   - Task: predict salary from years of professional experience.  
-   - Methods: removing an extra index column, exploratory data analysis and scatter plot, train/test split, Linear Regression model, evaluation with mean squared error (MSE), mean absolute error (MAE), R-squared (≈ 0.90), and visualisation of actual vs predicted salaries.
-   - Key results: Model attains R-squared ≈ 0.90 on the test set, with mean absolute error around 6,300 salary units and a clear linear relationship between experience and salary.
+File: twitter_sentiment_classification.ipynb
 
-5. `twitter_sentiment_classification.ipynb`  
-   - Dataset: Kaggle Twitter entity-level sentiment dataset (tweet ID, entity, sentiment label, tweet text).  
-   - Task: classify tweets into four sentiment classes (Irrelevant, Negative, Neutral, Positive) based on the tweet content.  
-   - Methods: data cleaning and column renaming, handling missing values, train/test split with stratification, TF-IDF text vectorisation, Logistic Regression classifier, evaluation with accuracy, precision/recall/F1-score per class, and confusion matrix heatmap (test accuracy ≈ 74%).  
-   - Key results: Logistic Regression with TF-IDF features achieves about 74% test accuracy, with per-class F1-scores from 0.67 (Irrelevant) up to 0.78 (Negative) and macro/weighted F1 averages around 0.73–0.74.
+* Task: Classify tweets into four sentiment categories: Positive, Negative, Neutral and Irrelevant.
+* Methods: Text preprocessing, TF-IDF vectorisation, Logistic Regression, stratified train/test split and model evaluation.
+* Results: Achieved approximately 74% test accuracy, with macro F1-score around 0.73.
+* Tools: Python, scikit-learn, pandas.
 
-6. `wine_classification.ipynb`  
-   - Dataset: built-in wine dataset from scikit-learn.  
-   - Task: classify wine samples into one of three cultivars based on their chemical properties.  
-   - Methods: train/test split, feature standardisation, Logistic Regression classifier, accuracy, confusion matrix and classification report.
-   - Key results: Model reaches high test accuracy on the 3-class wine task and shows balanced performance across classes in the confusion matrix and classification report.
+2. Cats vs Dogs Image Classification (CNN)
+
+File: cats_dogs_classification.ipynb
+
+* Task: Train a convolutional neural network to classify images of cats and dogs.
+* Methods: Image preprocessing, convolutional and max-pooling layers, binary cross-entropy loss and Adam optimiser.
+* Results: Achieved approximately 89% training accuracy and 67% validation accuracy after 10 epochs. The difference suggests overfitting.
+* Tools: Python, TensorFlow/Keras.
+
+3. Housing Price Prediction — Data Preprocessing and Model Comparison
+
+File: messy_housing_regression.ipynb
+
+* Task: Predict housing prices using a small dataset containing missing values and categorical features.
+* Methods: Data cleaning, one-hot encoding, train/test split, Linear Regression and Random Forest models.
+* Evaluation: Compared models using MAE, RMSE and R².
+* Results: Random Forest achieved MAE ≈ 0.88 and R² ≈ 0.97 in the experiment where incomplete rows were removed.
+* Additional experiment: Compared removing incomplete observations with mean imputation. Missing values were calculated using training data only to avoid data leakage. The approaches used different test sets, so their results are not directly comparable.
+* Tools: Python, pandas, scikit-learn.
+
+4. California Housing Price Regression
+
+File: california_housing_regression.ipynb
+
+* Task: Predict median housing values using the California Housing dataset.
+* Methods: Feature standardisation, Linear Regression, train/test split and evaluation using MAE, MSE and R².
+* Visualisation: Compared actual and predicted housing values using scatter plots.
+* Tools: Python, scikit-learn, pandas.
+
+5. Wine Classification
+
+File: wine_classification.ipynb
+
+* Task: Classify wine samples into three categories using chemical measurements.
+* Methods: Feature standardisation, Logistic Regression and multiclass classification.
+* Evaluation: Accuracy, confusion matrix and classification report.
+* Tools: Python, scikit-learn.
+
+6. Salary Prediction
+
+File: salary_regression.ipynb
+
+* Task: Predict salaries based on years of professional experience.
+* Methods: Exploratory data analysis, Linear Regression and train/test split.
+* Results: Achieved approximately R² = 0.90 and MAE = 6,300 salary units on the test set.
+* Tools: Python, pandas, scikit-learn.
+
+Technical Skills Demonstrated
+
+* Programming: Python, NumPy, pandas
+* Machine Learning: Linear Regression, Logistic Regression, Random Forest, classification and regression
+* Deep Learning: Convolutional Neural Networks, TensorFlow/Keras
+* Natural Language Processing: TF-IDF, text classification
+* Data Preprocessing: Missing-value handling, categorical encoding, feature standardisation
+* Model Evaluation: Accuracy, precision, recall, F1-score, MAE, MSE, RMSE, R² and confusion matrices
+
+Running the Projects
+
+The projects are provided as Jupyter notebooks and can be opened in Google Colab.
+
+Some notebooks require external datasets, with their sources described in the individual projects.
