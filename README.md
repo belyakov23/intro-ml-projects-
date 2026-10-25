@@ -19,9 +19,10 @@ File: twitter_sentiment_classification.ipynb
 
 File: cats_dogs_classification.ipynb
 
-* Task: Train a convolutional neural network to classify images of cats and dogs.
-* Methods: Image preprocessing, convolutional and max-pooling layers, binary cross-entropy loss and Adam optimiser.
-* Results: Achieved approximately 89% training accuracy and 67% validation accuracy after 10 epochs. The difference suggests overfitting.
+* Task: Classify images of cats and dogs using deep learning.
+* Methods: Built a CNN from scratch using convolutional and max-pooling layers. Experimented with data augmentation, dropout and early stopping to reduce overfitting.
+* Transfer learning: Used MobileNetV2 pretrained on ImageNet, froze the pretrained layers and trained a new classification layer.
+* Results: Improved test accuracy from 67.86% with the original CNN to 87.86% with MobileNetV2, an increase of 20 percentage points.
 * Tools: Python, TensorFlow/Keras.
 
 3. Housing Price Prediction — Data Preprocessing and Model Comparison
